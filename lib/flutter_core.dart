@@ -6,3 +6,4 @@ export 'styles/_styles.dart';
 export 'theme/_theme.dart';
 export 'utils/_utils.dart';
 export 'widgets/_widgets.dart';
+export 'router/router.dart';

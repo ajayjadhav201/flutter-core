@@ -50,11 +50,17 @@ class _ThemeProvider<T extends AppThemeMode> extends ChangeNotifier {
 }
 
 extension ThemeExtension on BuildContext {
-  AppThemeMode get theme => InheritedScope.watch<_ThemeProvider>(this).theme;
+  MyTheme get theme =>
+      InheritedScope.watch<_ThemeProvider<MyTheme>>(this).theme;
 }
 
 //
 //
 mixin AppThemeMode {
   bool get isDark;
+}
+
+class MyTheme with AppThemeMode {
+  //
+  bool isDark = false;
 }
